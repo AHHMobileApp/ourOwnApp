@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration> 
+
+    <session-factory> 
+    <property name="show_sql">true</property> 
+    <property name="format_sql">true</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property> 
+    <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
+    <property name="connection.url">jdbc:mysql://localhost/</property> 
+    <property name="connection.username">root</property> 
+    <property name="connection.password"></property>
+-->
+	<property name="connection.driver_class">sun.jdbc.odbc.JdbcOdbcDriver</property> 
+    <property name="connection.url">jdbc:odbc:driver={Microsoft Access Driver (*.mdb)};DBQ=C:\Users\PAM\pos.mdb</property>  
+    <!-- <property name="connection.url">jdbc:odbc:driver={Microsoft Access Driver (*.mdb)};DBQ=C:\pos.mdb</property>-->
+    
+   	<mapping resource="items/item.hbm.xml"/> 
+   	<mapping resource="items/catagory.hbm.xml"/> 
+   	<mapping resource="vips/vip.hbm.xml"/> 
+   	<mapping resource="records/record.hbm.xml"/> 
+   	<mapping resource="records/voidRecord.hbm.xml"/> 
+   	<mapping resource="records/bill.hbm.xml"/> 
+   	<mapping resource="records/lastID.hbm.xml"/> 
+    </session-factory> 
+
+</hibernate-configuration>

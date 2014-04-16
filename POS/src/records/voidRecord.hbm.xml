@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-mapping 
+ PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping> 
+
+    <class name="records.VoidRecord" table="VOIDRECORD"> 
+        <id name="recordID" column="recordID"> 
+        </id> 
+        <property name="recordDate" column="recordDate"/>
+        <property name="voidDate" column="voidDate"/>
+        <property name="voidPrice" column="voidPrice"/>
+        <property name="productID" column="productID"/>
+    </class> 
+</hibernate-mapping>
